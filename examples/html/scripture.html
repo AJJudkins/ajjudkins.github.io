@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Applied Scripture</title>
+    <script>
+        function applyScripture() {
+            let name = document.getElementById('nameInputBox').value;
+
+            let scripture = "And after I, " + name + ", had heard these words," +
+                " my faith began to be unshaken in the Lord; and I prayed unto Him" +
+                " with many long strugglings for my brethren, the Lamanites.";
+
+            document.getElementById('outputDiv').innerHTML = scripture;
+        }
+    </script>
+</head>
+
+<body>
+    <p>Please enter your name:</p>
+    <input type="text" id="nameInputBox">
+    <button type="button" onclick="applyScripture()">Enter</button>
+    <div id="outputDiv"></div>
+</body>
+
+</html>
