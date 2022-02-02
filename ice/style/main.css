@@ -1,16 +1,20 @@
 body {
     background-color: pink;
-}
-h1 {
+    text-align: center;
+    }
+    
+    h1 {
     color: white;
-}
-.quote {
+    }
+    
+    .pres {
     color: white;
-}
-.nelson {
+    width: 200;
+    }
+    h2 {
     color: white;
-    font-size: larger;
-}
-.bullet {
-    font-weight: bold;
-}
+    }
+    
+    #picture {
+    width: 200px;
+    }
