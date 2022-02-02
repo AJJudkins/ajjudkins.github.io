@@ -9,7 +9,7 @@ div{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     text-align: center;
-    margin: 15px;
+    margin: 10px;
 }
 .image{
     width: 250px;
