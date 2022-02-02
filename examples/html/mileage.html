@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Miles Per Gallon</title>
+    <script>
+        function mpg() {
+            let m2 = parseFloat(document.getElementById('after').value);
+            let m1 = parseFloat(document.getElementById('before').value);
+            let g = parseFloat(document.getElementById('gas').value);
+            let m = m2 - m1;
+            let mpg = m / g;
+            let digits = 2;
+            let multiplier = Math.pow(10, digits);
+            mpg = Math.round(mpg * multiplier) / multiplier;
+            document.getElementById('milesPerGal').innerHTML = mpg;
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Calculate Your Average MPG</h1>
+    <p>
+        Please enter your previous odometer reading:
+    </p>
+    <input type="text" id="before">
+    <p>
+        Please enter your current odometer reading:
+    </p>
+    <input type="text" id="after">
+    <p>
+        Please enter the amount of gallons used:
+    </p>
+    <input type="text" id="gas">
+    <button type="button" onclick="mpg()">Calculate</button>
+    <div id="milesPerGal"></div>
+</body>
+
+</html>

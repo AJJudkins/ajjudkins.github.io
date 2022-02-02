@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversion</title>
+    <script>
+        function conversion() {
+            let q = parseFloat(document.getElementById('quarts').value);
+            let l = q * 0.946
+            let digits = 2;
+            let multiplier = Math.pow(10, digits);
+            l = Math.round(l * multiplier) / multiplier;
+            document.getElementById('liters').innerHTML = l;
+        }
+    </script>
+</head>
+<body>
+    
+    <h1>Convert Quarts to Liters</h1>
+    <p>
+        Enter in the amount of quarts:
+    </p>
+    <input type="text" id="quarts">
+    <button type="button" onclick="conversion()">Convert</button>
+    <div id="liters"></div>
+</body>
+</html>
