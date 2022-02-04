@@ -2,26 +2,37 @@
     max-width: 1600px;
     margin: 0 auto;
 }
-#menu{
+
+#menu {
     text-align: center;
 }
-#menu a{
+
+#menu a {
     text-decoration: none;
+    padding: 35px;
 }
+
 #hero-img {
     width: 100%;
 }
 
 #hero-msg {
     text-align: center;
+    font-size: 2em;
+    font-family: 'Luxurious Roman', cursive;
+    margin-top: 10px;
 }
 
 #hero-msg2 {
     text-align: center;
+    font-family: 'Roboto Slab', serif;
+    font-size: .5em;
+    padding-bottom: 5px;
 }
 
 .button-box {
     text-align: center;
+    padding-top: 10px;
 }
 
 main {
@@ -35,6 +46,8 @@ main {
 
 body {
     background-color: white;
+    padding: 0;
+    margin: 0;
 }
 
 header {
@@ -44,16 +57,26 @@ header {
 footer {
     background-color: #1D3557;
     color: white;
+    padding: 25px 50px;
+    margin-top: 200px;
 }
-footer a{
+
+footer a {
     text-decoration: none;
 }
-footer a:hover{
+
+footer a:hover {
     color: lightblue;
 }
-footer h3 a:hover{
+
+footer h3 a:hover {
     text-decoration: underline;
 }
+
+.social {
+    padding-top: 15px;
+}
+
 nav a:hover {
     color: lightblue;
 }
@@ -61,17 +84,32 @@ nav a:hover {
 .book {
     background-color: #1D3557;
     text-decoration: none;
+    font-size: 18px;
+    padding: 15px 30px;
+    margin-top: 50px;
+    border-radius: 5px;
 }
 
 .join {
     background-color: #E63946;
     text-decoration: none;
+    font-size: 18px;
+    padding: 15px 30px;
+    margin-top: 50px;
+    border-radius: 5px;
 }
 
 .msg {
     background-color: #E63946;
     color: white;
+    font-size: 1.5em;
+    padding: 35px;
 }
+
+.msp p {
+    padding-bottom: 15px;
+}
+
 a {
     color: white;
 }
@@ -79,9 +117,42 @@ a {
 a:hover {
     color: lightblue;
 }
+.card-image{
+    border: 10px solid #457B9D;
+}
+main section img{
+    box-sizing: border-box;
+}
 .logo {
     width: 80px;
 }
+
+#logo_link {
+    padding-top: 5px;
+}
+
+.river-card {
+    margin: 200px 0;
+}
+
+.camping-card {
+    margin: 200px 0;
+}
+
+.rapids-card {
+    margin: 200px 0;
+}
+
 .icon {
     width: 80px;
+    padding-top: 10px;
+}
+
+h2 {
+    font-family: 'Luxurious Roman', cursive;
+    margin: 0;
+}
+
+p {
+    font-family: 'Roboto Slab', serif;
 }
