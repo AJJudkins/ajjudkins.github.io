@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enter Title Here</title>
+    <script>
+        function calculate() {
+            let a = parseFloat(document.getElementById('first').value);
+            let b = document.getElementById('sign').value;
+            let c = parseFloat(document.getElementById('second').value);
+            let d = parseFloat(document.getElementById('answer').value);
+
+            let message;
+            if (a + c == d) {
+                message = 'Correct! Good job!';
+            } else if (a - c == d) {
+                message = 'Correct! Good job!';
+            } else if (a * c == d) {
+                message = 'Correct! Good job!';
+            } else if (a / c == d) {
+                message = 'Correct! Good job!';
+            } else {
+                message = 'Incorrect. Try Again!';
+
+            }
+            document.getElementById('message').innerHTML = message;
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Test Your Math Skills!</h1>
+    <input type="text" id="first">
+    <input type="text" id="sign">
+    <input type="text" id="second">
+    <p>=</p>
+    <input type="text" id="answer">
+    <button type="button" onclick="calculate()">Check</button>
+    <div id="message"></div>
+</body>
+
+</html>

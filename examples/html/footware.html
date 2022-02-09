@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What Shoes Should You Wear?</title>
+    <script>
+        function input(){
+            let w = document.getElementById('weather').value;
+            let message;
+            if (w == hot) {
+                message = 'Sandals';
+            } else if (w == rain) {
+                message = 'Galoshes';
+            } else if (w == snow) {
+                message = 'Boots';
+            }  else {
+                message = 'Shoes';
+            }
+            document.getElementById('message').innerHTML = message;
+        }
+    </script>
+</head>
+
+<body>
+    <h1>What Shoes Should You Wear?</h1>
+    <p>
+        What is the weather like today?
+    </p>
+    <input type="text" id="weather">
+    <button type="button" onclick="input()">Answer</button>
+    <div id="message"></div>
+</body>
+
+</html>

@@ -1,0 +1,50 @@
+section {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+
+#words {
+    text-align: left;
+}
+
+h1 {
+    font-size: x-large;
+    max-width: 300px;
+    text-align: center;
+}
+
+p {
+    font-size: large;
+    max-width: 300px;
+    text-align: center;
+}
+
+#email {
+    display: block;
+    margin: 5px;
+    padding-right: 110px;
+}
+
+#name {
+    display: block;
+    margin: 5px;
+    padding-right: 110px;
+}
+
+#d2 {
+    align-self: center;
+}
+
+label {
+    font-size: x-small;
+}
+
+button {
+    margin-top: .5%;
+    margin-left: 15%;
+    align-content: center;
+    background-color: orange;
+    color: white;
+    border-radius: 2px;
+    border-style: none;
+}
