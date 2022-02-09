@@ -1,6 +1,7 @@
 section {
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 249px 0fr;
+    gap: 33px;
 }
 
 #words {
