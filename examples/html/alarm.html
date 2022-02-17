@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alarm</title>
+    <script>
+        function alarm() {
+            var now = new Date();
+            var month = now.getMonth();
+            var dayOfMonth = now.getDate();
+            var dayOfWeek = now.getDay();
+            
+            if (dayOfWeek == 0 || dayOfWeek == 6){
+                msg = "Sleep in.";
+            }
+            else if (month == 0 && dayOfMonth == 1){
+                msg = "Sleep in.";
+            }
+            else if (month == 6 && dayOfMonth == 4){
+                msg = "Sleep in.";
+            }
+            else if (month == 11 && dayOfMonth == 25){
+                msg = "Sleep in.";
+            }
+            else if (dayOfWeek >= 1 && dayOfWeek <= 5){
+                msg = "Get Up!";
+            }
+            document.getElementById("message").innerHTML = msg;
+        }
+    </script>
+</head>
+
+<body>
+    <button type="button" onclick="alarm()">Alarm</button>
+    <div id="message"></div>
+</body>
+
+</html>
