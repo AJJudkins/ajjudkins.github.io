@@ -12,7 +12,10 @@
             let b = a * 0.10;
             let c = b * 0.06;
             let d = a * 0.06;
-            if (dayOfWeek == 2 || dayOfWeek == 3 && a >= 50){
+            if (dayOfWeek == 2 && a >= 50){
+                total = (a - b) + c;
+            }
+            else if(dayOfWeek == 3 && a >= 50){
                 total = (a - b) + c;
             }
             else {
