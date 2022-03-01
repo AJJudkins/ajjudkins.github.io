@@ -1,0 +1,43 @@
+body{
+    background-color: black;
+}
+.main{
+    text-align: center;
+    width: 300px;
+    background-color: white;
+    border-radius: 20px;
+    margin: 0 auto;
+}
+img{
+    border-radius: 20px 20px 0px 0px;
+}
+#weeks{
+    color: #3f5b8a;
+    font-weight: bolder;
+    font-size: 14px;
+}
+h1{
+    font-weight: bolder;
+    margin-top: -15px;
+}
+#text{
+    width: auto;
+    font-size: 16px;
+    color: gray;
+    
+}
+#grid{
+    display: grid;
+    grid-template-columns: repeat(3,100px);
+    background-color: #3f5b8a;
+    color: white;
+    border-radius: 0px 0px 20px 20px;
+    height: 75px;
+}
+#bottom{
+    border-color: lightgray;
+    border-style: dashed;
+    border-width: 2px;
+    border-top: 100px;
+    border-bottom: 100px;
+}
