@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+
+<head>
+    <meta charset="utf-8">
+    <title>Divisor</title>
+    <script>
+        function divide(){
+            let number = ",";
+            let start = document.getElementById("start").value;
+            let end = document.getElementById("end").value;
+            let d = document.getElementById("divisor").value;
+            for (let i = end; i >= end && i <= start ; i++) {
+                if (i / d == 0) {
+                     number += i;
+                }
+            }
+            document.getElementById("output").innerHTML = number;
+        }
+    </script>
+</head>
+
+<body>
+    Start: <input type="text" id="start" size="5"><br>
+    End: <input type="text" id="end" size="5"><br>
+    Divisor: <input type="text" id="divisor" size="5"><br>
+    <button type="button" onclick="divide()">Click</button>
+    <div id="output"></div>
+</body>
+
+</html>

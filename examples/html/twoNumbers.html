@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+
+<head>
+    <meta charset="utf-8">
+    <title>Title</title>
+    <script>
+        /* Input: Two numbers 
+         * Processing: add them together to see if they are greater than 20 or if both numbers are greater than 5 
+         * Output: True, false
+         */
+        function compare() {
+            let i = document.getElementById('one').value;
+            let e = document.getElementById("two").value;
+            if ((i >= 5 && e >= 5) || i + e >= 20){
+                message = "True";
+            } else{
+                message = "False"
+            }
+            document.getElementById("output").innerHTML = message;
+        }
+    </script>
+</head>
+
+<body>
+    Please enter two numbers:
+    <input type="text" id="one" size="5">
+    <input type="text" id="two" size="5">
+    <button type="button" onclick="compare()">Click</button>
+    <div id="output"></div>
+</body>
+
+</html>
