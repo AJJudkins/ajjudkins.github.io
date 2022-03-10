@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wind Chill</title>
+    <script>
+        function doInputOutput(){
+            outsideTemp = document.getElementById('temp').value;
+            windSpeed = document.getElementById('speed').value;
+            let f = windchill(outsideTemp,windSpeed)
+            document.getElementById('output').innerHTML = f;
+        }
+        function windchill(outsideTemp,windSpeed){
+            let result = 35.74 + 0.6215 * outsideTemp - 35.75 * windSpeed ^ 0.16 + 0.4275 * outsideTemp * windSpeed ^ 0.16;
+            return result;
+        }
+    
+    </script>
+</head>
+<body>
+    <h1>Windchill</h1>
+    <p>
+        Enter current temperature in Fahrenheit:
+    </p>
+    <input type="text" id="temp">
+    <p>
+        Enter current windspeed in MPH:
+    </p>
+    <input type="text" id="speed">
+    <button type="button" onclick="doInputOutput()">Calculate</button>
+    <div id="output"></div>
+</body>
+</html>

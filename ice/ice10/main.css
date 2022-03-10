@@ -1,0 +1,35 @@
+main{
+    display: grid;
+}
+.check{
+    text-align: center;
+    justify-content: center;
+    justify-self: center;
+    border: .5px solid lightcoral;
+    max-width: 500px;
+}
+#venice{
+    max-width: 200px;
+    max-height: 200px;
+}
+#dislike{
+    background-color: gray;
+    outline: 2px solid darkgray;
+    outline-offset: 2px;
+}
+button{
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    background-color: #4682D5;
+    outline: 2px solid #4682D5;
+    outline-offset: 2px;
+    border-radius: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+a:link, a:visited, a:hover, a:active {
+        color: #64A7F5;
+        text-decoration: none;
+    }
