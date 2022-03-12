@@ -13,7 +13,10 @@
             document.getElementById('output').innerHTML = f;
         }
         function windchill(outsideTemp,windSpeed){
-            let result = 35.74 + 0.6215 * outsideTemp - 35.75 * windSpeed ^ 0.16 + 0.4275 * outsideTemp * windSpeed ^ 0.16;
+            let result = 35.74 + 0.6215 * outsideTemp - 35.75 * Math.pow(windSpeed, 0.16)+ 0.4275 * outsideTemp * Math.pow(windSpeed, 0.16);
+            let digits = 2;
+            let multiplier = Math.pow(10, digits);
+            result = Math.round(result * multiplier) / multiplier;
             return result;
         }
     
