@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Investment Calculator</title>
+    <script>
+        function doFV(){
+         let a = document.getElementById('principal').value;
+         let b = document.getElementById('rate').value;
+         let c = document.getElementById('years').value;
+         let d = document.getElementById('periods').value;
+         let e = b / d
+         let f = computeFV(a,c,e)
+         document.getElementById('output').innerHTML = f;
+        }
+
+        function computeFV(a,c,e){
+            let result = a * Math.pow((1 + e),c);
+            let digits = 2;
+            let multiplier = Math.pow(10, digits);
+            result = Math.round(result * multiplier) / multiplier;
+            return result;
+        }
+    </script>
+</head>
+<body>
+    <!-- Do not forget to change all of the ID's and text-->
+    <h1>Investment Calculator</h1>
+    <p>
+        Amount Invested (Principal):
+    </p>
+    <input type="text" id="principal">
+    <p>
+        Annual Rate (Example: 0.08):
+    </p>
+    <input type="text" id="rate">
+    <p>
+        Number of Years:
+    </p>
+    <input type="text" id="years">
+    <p>
+        Periods Per Year:
+    </p>
+    <input type="text" id="periods"> <br>
+    <button type="button" onclick="doFV()">Calculate Future Value</button>
+    <div id="output"></div>
+</body>
+</html>

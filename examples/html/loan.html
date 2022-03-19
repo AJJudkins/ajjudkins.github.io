@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Investment Calculator</title>
+    <script>
+        function doPayment(){
+         let a = document.getElementById('principal').value;
+         let b = parseFloat(document.getElementById('rate').value);
+         let c = document.getElementById('years').value;
+         let d = document.getElementById('periods').value;
+         let e = b / d;
+         let f = computePayment(a,c,e);
+         document.getElementById('output').innerHTML = f;
+        }
+
+        function computePayment(a,c,e){
+            let result = (a * e) / Math.pow((1 + e),-c) - 1 ;
+            let digits = 2;
+            let multiplier = Math.pow(10, digits);
+            result = Math.round(result * multiplier) / multiplier;
+            return result;
+        }
+
+        function doBalance(){
+            let g = document.getElementById('payments').value;
+            let h = a * Math.pow((1 + e),g);
+            let j = f * (Math.pow((1 + e),g) - 1);
+            let k = j / e;
+            let i = computeBalance(h,j);
+            document.getElementById('outputTwo').innerHTML = i;
+        }
+
+        function computeBalance(h,j){
+            let results = h - j;
+            let digits = 2;
+            let multiplier = Math.pow(10, digits);
+            results = Math.round(results * multiplier) / multiplier;
+            return results;
+        }
+
+    </script>
+</head>
+<body>
+    <!-- Do not forget to change all of the ID's and text-->
+    <h1>Loan Calculator</h1>
+    <p>
+        Amount Borrowed (Principal):
+    </p>
+    <input type="text" id="principal">
+    <p>
+        Annual Interest Rate (Example: 0.08):
+    </p>
+    <input type="text" id="rate">
+    <p>
+        Number of Years:
+    </p>
+    <input type="text" id="years">
+    <p>
+        Payments Per Year:
+    </p>
+    <input type="text" id="periods"> <br>
+    <button type="button" onclick="doPayment()">Compute Payment</button>
+    <div id="output"></div> <br>
+    <p>
+        Number of Payments Paid to Date:
+    </p>
+    <input type="text" id="payments"> <br>
+    <button type="button" onclick="doBalance()">Compute Balance</button>
+    <div id="outputTwo"></div>
+</body>
+</html>
