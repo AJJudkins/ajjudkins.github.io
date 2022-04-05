@@ -9,61 +9,64 @@
     <link rel="stylesheet" href="style/main.css">
     <script src="https://kit.fontawesome.com/615f9311d2.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link
-        href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp"
-        rel="stylesheet">
 </head>
 
 <body>
     <div>
-        <header>
+        <header id="nav">
             <a id="logo_link" href="index.html">
                 <img class="logo" src="images/Bloodwothlogo.jpg" alt="Bloodworth Knives Logo">
             </a>
             <nav id="menu">
-                <a href="index.html">Home</a>
-                <a href="aboutus.html">About Us</a>
-                <a href="contactUs.html">Contact Us</a>
-                <a href="site-plan.html">Site-Plan</a>
+                <a id="home" href="index.html">Home</a>
+                <a id="aboutus" href="aboutus.html">About Us</a>
+                <a id="contactus" href="contactUs.html">Contact Us</a>
+                <a id="siteplan" href="site-plan.html">Site-Plan</a>
             </nav>
         </header>
-        <main>
-            <div>
+        <main id="contactmain">
+            <div id="backgrounddiv">
                 <div id="feedback"></div>
-                <h1>Contact Us</h1>
-                <form action="submit" method="post">
-                    <ul>
-                        <li>
-                            <label for="name">Name:</label>
-                            <input type="text" id="name" name="user_name">
-                        </li>
-                        <li>
-                            <label for="mail">E-mail:</label>
-                            <input type="email" id="mail" name="user_email">
-                        </li>
-                        <li>
-                            <label for="msg">Message:</label>
-                            <textarea id="msg" name="user_message"></textarea>
-                        </li>
-                        <li class="button">
-                            <button type="submit">Send your message</button>
-                        </li>
-                    </ul>
-                </form>
-                <p>
-                    BLOODWORTH CUSTOM KNIVES
-                    Our E-mail Address : Support@bloodworthknives.com 
-                    Our Phone Number: (208) 888-8888
+                <div>
+                    <h1>Contact Us</h1>
+                </div>
+                <div id="contactdiv">
+                    <form action="submit" method="post">
+                        <ul id="list">
+                            <li id="name">
+                                <label>Name:</label> <br>
+                                <input id="username" type="text" name="user_name">
+                            </li>
+                            <li id="mail">
+                                <label>E-mail:</label> <br>
+                                <input id="useremail" type="email" name="user_email">
+                            </li>
+                            <li id="msg">
+                                <label>Message:</label> <br>
+                                <textarea id="usermsg" name="user_message"></textarea>
+                            </li>
+
+                        </ul>
+                    </form>
+                </div>
+                <div id="contactbutton">
+                    <button id="send" type="submit">Send your message</button>
+                </div>
+                <p id="companyemail">
+                    E-mail Address : Support@bloodworthknives.com
+                </p>
+                <p id="companynumber">
+                    Phone Number: (208) 888-8888
                 </p>
             </div>
-            <div>
-
-                <img src="images/5cc2cd05f7ebb6d96aa6243748505844.jpg" alt="Knife">
+            <div id="contactdivtwo">
+                <p>Have you ever dreamed of building a specific knife? Contact us with any
+                    questions that you may have about pricing or to see if we can help make your dream comes true.</p>
                 <img src="images/2e7c18d15fb5d8bd1120ae541bb4c283.jpg" alt="Knife">
             </div>
         </main>
         <footer>
-            <h3>
+            <h3 id="copyright">
                 Bloodworth Knives &copy; 2022 - Austin Judkins
             </h3>
             <h3>
@@ -76,9 +79,12 @@
                 <a href="site-plan.html">Site-Plan</a>
             </h3>
             <div class="social">
-                <a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook-square"></i></a>
-                <a href="https://twitter.com/" target="_blank"><i class="fa-brands fa-twitter-square"></i></a>
-                <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram-square"></i></a>
+                <a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook-square"
+                        style="font-size: 50px;color: #FEFAE0;"></i></a>
+                <a href="https://twitter.com/" target="_blank"><i class="fa-brands fa-twitter-square"
+                        style="font-size: 50px; color: #FEFAE0;"></i></a>
+                <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram-square"
+                        style="font-size: 50px; color: #FEFAE0;"></i></a>
             </div>
         </footer>
     </div>
