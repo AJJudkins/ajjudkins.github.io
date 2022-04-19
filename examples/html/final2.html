@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Final</title>
+    <script>
+        function depreciation() {
+            let start = document.getElementById('startValue').value;
+            let end = document.getElementById('endValue').value;
+            let m = document.getElementById('months').value;
+            let dep = (start - end) / m;
+            let digits = 2;
+            let multiplier = Math.pow(10, digits);
+            dep = Math.round(dep * multiplier) / multiplier;
+            document.getElementById('output').innerHTML = dep;
+        }
+    </script>
+</head>
+
+<body>
+    <p>
+        Start Value:
+    </p>
+    <input type="text" id="startValue">
+    <p>
+        End Value:
+    </p>
+    <input type="text" id="endValue">
+    <p>
+        Number of Months:
+    </p>
+    <input type="text" id="months">
+    <button type="button" onclick="depreciation()">Calculate</button>
+    <div id="output"></div>
+</body>
+
+</html>
