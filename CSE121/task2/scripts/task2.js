@@ -3,7 +3,7 @@
 /* VARIABLES */
 
 // Step 1: declare and instantiate a variable to hold your name
-let fullName = "Austin Judkins"
+let fullName = "Austin Judkins";
 
 // Step 2: place the value of the name variable into the HTML file (hint: document.querySelector())
 document.querySelector('#name').innerHTML = fullName;
@@ -16,7 +16,7 @@ document.querySelector('#year').innerHTML = currentYear;
 
 // Step 5: declare and instantiate a variable to hold the name of your picture
 let profilePic = 'images/profile.jpg';
-let profileAlt = 'Austin Judkins Profile Picture'
+let profileAlt = 'Austin Judkins Profile Picture';
 
 // Step 6: copy your image into the "images" folder
 
