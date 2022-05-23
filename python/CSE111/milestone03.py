@@ -9,13 +9,20 @@ subTotal = (children * kids) + (adults * adult)
 salesTax = (subTotal * taxRate / 100)
 total = (subTotal + salesTax)
 
-print(f'Subtotal: ${subTotal}')
+print(f'Subtotal: ${subTotal: .2f}')
 print()
-print(f'Sales Tax: ${salesTax}')
+print(f'Sales Tax: ${salesTax: .2f}')
 print()
-print(f'Total: ${total}')
+
+tip = input('Would you like to add a 15% tip? (Y/N): ')
+if tip == "Y":
+    grandTotal = (subTotal + salesTax) + (total * .15)
+elif tip == "N":
+    grandTotal = (subTotal + salesTax)
+
+print(f'Total: ${grandTotal: .2f}')
 
 pay = float(input('What is the payment amount?'))
 change = (pay - total)
 print()
-print(f'Change: ${change}')
+print(f'Change: ${change: .2f}')
