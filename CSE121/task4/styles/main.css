@@ -3,6 +3,11 @@ body {
     font-family: 'Kalam', cursive;
 }
 
+img {
+    width: 400px;
+    height: 500px;
+}
+
 div {
     margin: 10px;
     text-align: center;
@@ -56,6 +61,7 @@ nav ul li a {
     padding: 10px;
     text-decoration: none;
 }
+
 nav ul li a:hover {
     background-color: #efefef;
     color: black;
@@ -72,7 +78,9 @@ nav ul li a:hover {
 }
 
 /* ID Selectors */
-#favorite-foods, #hobbies, #places-lived {
+#favorite-foods,
+#hobbies,
+#places-lived {
     margin: 0;
     padding: 0;
     list-style: none;
@@ -86,7 +94,7 @@ nav ul li a:hover {
     nav ul {
         flex-direction: row;
     }
-    
+
     nav ul li:first-child {
         display: none;
     }
