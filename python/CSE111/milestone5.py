@@ -23,6 +23,8 @@ You fall off the bridge and are unable to continue. Would you like to restart th
 
             elif choiceFour.lower() == "n":
                 print('Thank you for playing!')
+            else:
+                print('Invalid entry please restart.')
 
         elif choiceThree.lower == "caution":
             choiceFour = input('You slowly make your way across the bridge testing each board before stepping. \
@@ -34,6 +36,8 @@ an ice wall and have nowhere to go. Would you like to restart the game? (Y/N) ')
 
             elif choiceFour.lower() == "n":
                 print('Thank you for playing!')
+            else:
+                print('Invalid entry please restart.')
 
     elif choiceTwo.lower() == "cross":
         choiceThree = input('You look around, but to no avail you are not able to find another \
@@ -48,6 +52,8 @@ You fall off the bridge and are unable to continue. Would you like to restart th
 
             elif choiceFour.lower() == "n":
                 print('Thank you for playing!')
+            else:
+                print('Invalid entry please restart.')
 
         elif choiceThree.lower == "caution":
             choiceFour = input('You slowly make your way across the bridge testing each board before stepping. \
@@ -59,6 +65,8 @@ an ice wall and have nowhere to go. Would you like to restart the game? (Y/N) ')
 
             elif choiceFour.lower() == "n":
                 print('Thank you for playing!')
+            else:
+                print('Invalid entry please restart.')
 
 elif choiceOne.lower() == "left":
     choiceTwo = input('You start making your way up the path on the left. After some time, \
@@ -77,6 +85,8 @@ Would you like to take a picture, do a dance, or go home and sleep? (PICTURE/DAN
 
         elif choiceThree.lower() == "home":
             print('Thank you for playing!')
+        else:
+            print('Invalid entry please restart.')
 
     elif choiceTwo.lower() == "down":
         choiceThree = input('Why would you want to go down? You want to go to the summit remember? \
@@ -87,3 +97,7 @@ You head down the path and eventually find a dead end. Would you like to restart
 
         elif choiceThree.lower() == "n":
             print('Thank you for playing!')
+        else:
+            print('Invalid entry please restart.')
+else:
+    print('Invalid entry please restart.')

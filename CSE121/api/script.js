@@ -1,6 +1,5 @@
 let quote = document.getElementById('quote');
 let author = document.getElementById('author');
-let button = document.getElementById('button');
 
 let url = "https://api.quotable.io/random"
 
@@ -13,5 +12,5 @@ const getQuote = () => {
         });
 };
 
-button.addEventListener('click', getQuote());
+document.getElementById('button').addEventListener('click', getQuote());
 window.addEventListener('load', getQuote());
