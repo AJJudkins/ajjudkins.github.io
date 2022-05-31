@@ -18,7 +18,14 @@
             <h1 id="quote"></h1>
             <p id="author"></p>
             <div class="buttons">
-                <button id="button" onclick="getQuote()">Random Facts</button>
+                <select id="genre" onchange="getQuote()">
+                    <option value="random">Random</option>
+                    <option value="love">Love</option>
+                    <option value="tech">Technology</option>
+                    <option value="happiness">Happiness</option>
+                    <option value="famous">Famous</option>
+                </select>
+                <button id="button" onclick="getQuote()">Get Quote</button>
             </div>
         </div>
     </div>
