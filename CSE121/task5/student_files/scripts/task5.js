@@ -151,12 +151,12 @@ const sortBy = () => {
       // using ternary operators
       output(
         templeList.sort((temple1, temple2) =>
-          temple1.templeName.toLowerCase() > temple2.templeName.toLowerCase()
-            ? 1
-            : temple2.templeName.toLowerCase() >
-              temple1.templeName.toLowerCase()
-            ? -1
-            : 0
+          temple1.templeName.toLowerCase() > temple2.templeName.toLowerCase() ?
+          1 :
+          temple2.templeName.toLowerCase() >
+          temple1.templeName.toLowerCase() ?
+          -1 :
+          0
         )
       );
       break;
@@ -170,3 +170,57 @@ document.querySelector("#sortBy").addEventListener("change", sortBy);
 
 // Consider adding a "Filter by" feature that allows users to filter the list of temples
 // This will require changes to both the HTML and the JavaScript files
+
+
+const getQuote = async () => {
+
+  if (type === "random") {
+    let url = "https://api.quotable.io/random"
+    await fetch(url)
+      .then((data) => data.json())
+      .then((item) => {
+        quote.innerText = item.content;
+        author.innerText = item.author;
+      });
+  } else if (type === "love") {
+    let url = "https://api.quotable.io/quotes?tags=love"
+    await fetch(url)
+      .then((data) => data.json())
+      .then((item) => {
+        quote.innerText = item.content;
+        author.innerText = item.author;
+      });
+  } else if (type === "happiness") {
+    let url = "https://api.quotable.io/quotes?tags=happiness"
+    await fetch(url)
+      .then((data) => data.json())
+      .then((item) => {
+        quote.innerText = item.content;
+        author.innerText = item.author;
+      });
+  } else if (type === "tech") {
+    let url = "https://api.quotable.io/random?tags=technology"
+    await fetch(url)
+      .then((data) => data.json())
+      .then((item) => {
+        quote.innerText = item.content;
+        author.innerText = item.author;
+      });
+  } else if (type === "famous") {
+    let url = "https://api.quotable.io/random?tag=famous-quotes"
+    await fetch(url)
+      .then((data) => data.json())
+      .then((item) => {
+        quote.innerText = item.content;
+        author.innerText = item.author;
+      });
+  } else {
+    let url = "https://api.quotable.io/random"
+    await fetch(url)
+      .then((data) => data.json())
+      .then((item) => {
+        quote.innerText = item.content;
+        author.innerText = item.author;
+      });
+  }
+}
