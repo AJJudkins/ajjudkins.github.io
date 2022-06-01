@@ -41,4 +41,4 @@ const chooseType = () => {
 
 document.getElementById('genre').addEventListener("change", getUrl());
 document.getElementById('button').addEventListener('click', getUrl());
-//window.addEventListener('load', getUrl());
+window.addEventListener('load', getUrl());
