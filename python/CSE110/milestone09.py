@@ -13,6 +13,7 @@ while cont:
     print("4. Compute Total")
     print("5. Quit Program")
     choice = int(input("What is your choice? \n"))
+    list_number = 0
 
     if choice == 1:
         item = input("What item would you like to add? \n")
@@ -23,12 +24,22 @@ while cont:
         print()
 
     elif choice == 2:
+
         print("The contents of your shopping cart are: ")
-        for item in list_of_items:
-            print(item)
+
+        for item, price in zip(list_of_items, list_of_prices):
+            list_number += 1
+            print(f"{list_number}. {item} - ${price:.2f}")
 
     elif choice == 3:
         removal = int(input("Which item would you like to remove?"))
+
+        if removal <= len(list_of_items):
+            list_of_items.pop(removal - 1)
+            list_of_prices.pop(removal - 1)
+            print("Item was removed.")
+        else:
+            print("Sorry, that is not a valid item number.")
 
     elif choice == 4:
         for price in list_of_prices:
